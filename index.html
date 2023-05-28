@@ -167,8 +167,8 @@
     </div>
 </section>
 <!-- End paper abstract -->
-
-<section class="section hero is-light">
+<br>
+<section class="hero teaser">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
             <h2 class="title is-3">Comparison with other datasets</h2>
@@ -282,23 +282,23 @@
 
 <!-- Paper motivation -->
 <section class="section hero is-light">
-    <!-- <div class="container is-max-desktop"> -->
+    <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Motivation</h2>
                 <div class="content has-text-justified">
                     <p>
                         Aquatic biodiversity is of paramount importance in safeguarding the structure, stability, and overall health of aquatic ecosystems. Nonetheless, in recent decades, the escalating anthropogenic pressures 
-                        from human activities, including fisheries, climate change, and coastal development<cite>{aquabio,Moyle1992,laboy08}</cite>, have made the conservation of aquatic biodiversity increasingly difficult and 
-                        increasingly prominent in public attention. A key step in aquatic biodiversity protection is the ongoing monitoring, which calls for highly efficient species recognition and functional traits identification~\cite{REISS2009505,Nuria18,Wittebolle09}. 
+                        from human activities, including fisheries, climate change, and coastal development, have made the conservation of aquatic biodiversity increasingly difficult and 
+                        increasingly prominent in public attention. A key step in aquatic biodiversity protection is the ongoing monitoring, which calls for highly efficient species recognition and functional traits identification. 
                         However, this process generally calls for a high level of expert knowledge due to complicated species taxonomy, which makes it time- and labor-consuming. 
                     </p>
                     <p>
                         In recent years, deep learning methods have made significant breakthroughs in various computer vision tasks, presenting a promising solution for automatic and efficient species recognition. 
                         However, it is well-known that the accuracy of these AI-based models is heavily reliant on the scale and diversity of the training datasets. In the context of safeguarding aquatic biodiversity, 
                         there is an urgent need to develop large-scale and diverse datasets to facilitate AI-based aquatic species recognition systems. Several previous works have focused on building such datasets for fish 
-                        recognition. For example, Fish4Knowledge<cite>{fish4know}</cite> collected 27,370 fish images from 23 distinct species. In another study, 33,805 images of 30 different fish species from Barcelona, 
-                        Spain were collected for this purpose<cite>{imgdata}</cite>. Other works<cite>{seampd21,fishgres,fishabun,mfs,ncfm}</cite> have also accumulated fish images from specific regions, primarily focusing on species 
+                        recognition. For example, Fish4Knowledge collected 27,370 fish images from 23 distinct species. In another study, 33,805 images of 30 different fish species from Barcelona, 
+                        Spain were collected for this purpose. Other works have also accumulated fish images from specific regions, primarily focusing on species 
                         classification. However, these datasets are limited to a small number of species, posing a challenge to their application in real-world scenarios that require the recognition of diverse species. 
                         Therefore, there is an urgent need to develop more extensive and diverse datasets that can enable more robust AI-based systems to accurately identify a broader range of aquatic species, supporting aquatic
                          biodiversity conservation efforts.
@@ -310,9 +310,9 @@
 </section>
 <!-- End paper motivation -->
 
-
+<br>
 <!-- Paper Results -->
-<section class="section hero is-light">
+<section class="hero teaser">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
             <h2 class="title is-3">Classification Results</h2>
@@ -473,6 +473,33 @@
             <br>
         </div>
     </div>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Analyses</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        The table above shows the fish classification results at the Family and Order levels. From the table, it is evident that larger models consistently outperform smaller models in terms of 
+                        classification accuracy. Specifically, the best-performing ConvNeXt model achieved an average classification accuracy of 60.61% and 68.81% at the Family and Order levels, respectively. 
+                        We also observed that the performance for rare classes was significantly worse than that for common classes, with an average classification accuracy of 57.03% and 64.84% at the Family and 
+                        Order levels, respectively. This is because these rare classes have insufficient annotations, which poses great challenges for fish classification recognition.
+                    </p>
+                    <h3 class="title is-3">Mis-Classification</h3>
+                    <p>
+                        The top-performing ConvNeXt model exhibits an accuracy exceeding 80% across 38 out of 83 categories, while falling below 20% accuracy in 8 categories. 
+                        The most prevalent error occurs when misclassifying species belonging to the Cyprinodontiformes, Dactylopteriformes, Osmeriformes, Elopiformes, and Gonorynchiformes orders as Ophidiiformes. 
+                        Additionally, another common misclassification arises from misclassifying images from Eupercaria category as Elopiformes.
+                        <img src="static/images/conf.png" alt="teaser" width="100%">
+                    </p>
+                    <!-- <h4 class="title is-3">Mis-Classified Examples</h3> -->
+                    <!-- <p> -->
+                        <!-- We show examples from Cyprinodontiformes, Dactylopteriformes, Osmeriformes, Elopiformes, and Gonorynchiformes orders as Ophidiiformes.  -->
+                        <!-- Additionally, another common misclassification arises from misclassifying images from Eupercaria category as Elopiformes. -->
+                    <!-- </p> -->
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -564,12 +591,27 @@
             <br>
         </div>
     </div>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Functional Trait prediction Results</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        The aboev table shows the fish detection results at both the Family and Order levels. From the table, it is evident that TOOD consistently outperforms YOLOF in all metrics for Order level detection. 
+                        However, we observe that for family level classification, YOLOF exhibited better performance for Rare classes. Given the significantly higher number of Rare classes (405) as compared to Medium (52) and 
+                        Common (6) classes, it is not surprising that the average Mean Average Precision (MAP) per class was lower for TOOD.
+                        Therefore, we note that the evaluation of model performance can be influenced by the prevalence of different classes in the dataset.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 
-
-<section class="section hero is-light">
+<br>
+<section class="hero teaser">
     <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
             <h2 class="title is-3">Functional Traits Results</h2>
@@ -650,12 +692,34 @@
             <br>
         </div>
     </div>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Functional Trait prediction Results</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        The table above shows the classification results for nine fish functional traits. Overall, the larger models outperformed the smaller ones. Specifically, the ConvNeXt model achieved the best 
+                        results with an average f1-score of 81.72% and a classification accuracy of 90.45%. We also report the classification accuracy when our model correctly predicts all nine functional traits 
+                        simultaneously, marked as ``Acc-all". It was surprising that the best-performing ConvNeXt model obtained an accuracy-all of 54.0% for correctly predicting all classes simultaneously. 
+                        Please refer to the paper for examples and a detailed breakdown of the per-trait classification performance.
+                    </p>
+                    <h3 class="title is-3">Zero-Shot Classification</h3>
+                    <p>
+                        We further evaluated the habitat classification performance in a zero-shot setting, where we evaluated habitat classification on unseen classes, which were not never seen during training. 
+                        To achieve this, we trained the ConvNeXt model on 58 common and medium classes (according to their family classes) and evaluated the performance on 405 rare classes. 
+                        Although zero-shot habitat classification performance is worse than the supervised setting, the best-performed ViT-L model still shows a reasonable performance for zero-shot habitat classification, 
+                        with a classification accuracy of 80.23% and 18.80% on accuracy and accuracy-all. This demonstration showcases the capacity of the deep learning model to predict the functional traits of previously 
+                        unseen species, thereby establishing a valuable tool to help assigning the functional traits during the discovery of new species.                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <!-- End paper results -->
 
 <!-- Paper Analyses -->
-<section class="section hero is-light">
-    <!-- <div class="container is-max-desktop"> -->
+<!-- <section class="section hero is-light">
+     <div class="container is-max-desktop"> 
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Analyses</h2>
@@ -668,7 +732,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>  -->
 
 
 
